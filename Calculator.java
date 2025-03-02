@@ -13,6 +13,7 @@ public class Calculator {
 
         System.out.println("Enter second number");
         double num2=sc.nextDouble();
+        boolean invalid= false;
 
         double result=0;
 
@@ -34,9 +35,11 @@ public class Calculator {
                 break;
         
             default:
+                System.out.println("invalid Operator");
+                invalid=true;
                 break;
         }
-
+        if(!invalid)
         System.out.println(num1+" "+ch+" "+num2 +" = "+result);
         sc.close();
     }
