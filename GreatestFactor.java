@@ -11,6 +11,7 @@ public class GreatestFactor {
 
 
         int ans=1;
+        int fac=1;
 
         int i=2;
         int temp=num;
@@ -21,12 +22,15 @@ public class GreatestFactor {
                     System.out.print(i+" ");
                     ans=Math.max(i,ans);
                     num=num/i;
+                    fac =Math.max(num,fac);
+
                 }
             }
             i++;
         }
 
-        System.out.println("\nThe greatest factor of "+temp+" is "+ans);
+        System.out.println("\nThe greatest prime factor of "+temp+" is "+ans);
+        System.out.println("The greatest factor of "+temp+" is "+fac);
 
         sc.close();
     }
